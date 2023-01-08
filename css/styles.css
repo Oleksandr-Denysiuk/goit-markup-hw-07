@@ -81,9 +81,6 @@ button {
 /* ================= header =================*/
 
 @media screen and (min-width: 1200px) {
-  .container {
-    width: 1158px;
-  }
   .mobile-menu.btn {
     display: none;
   }
@@ -104,6 +101,11 @@ button {
   padding-left: 16px;
   padding-right: 16px;
   height: 70px;
+}
+.header-border {
+  background: #ffffff;
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 0px rgba(46, 47, 66, 0.08);
 }
 
 .page-logo {
@@ -186,7 +188,6 @@ button {
 }
 
 .mobile-menu {
-  position: relative;
   display: flex;
   position: fixed;
   width: 100%;
@@ -213,10 +214,13 @@ button {
 }
 
 .container-mobile {
+  position: relative;
+
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 100%;
+
+  background-color: #ffffe8;
   height: 100%;
   padding-top: 80px;
   padding-left: 40px;
@@ -383,6 +387,30 @@ button {
     color: var(--primary-text-color);
   }
 }
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1158px;
+  }
+  .auth-list {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+  }
+  .nav-list {
+    margin-left: 76px;
+  }
+  .header-container {
+    justify-content: start;
+  }
+  .auth-item:not(:last-child) {
+    margin-right: 40px;
+  }
+  .auth-link {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+  }
+}
 /* ================hero=============== */
 
 .hero {
@@ -397,7 +425,7 @@ button {
     url(../images/people-office.jpg);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
+  /* background-size: cover; */
 
   margin-left: auto;
   margin-right: auto;
@@ -453,6 +481,23 @@ button {
     padding: 112px 137px;
   }
 }
+@media screen and (min-width: 1200px) {
+  .hero {
+    height: 600px;
+    max-width: 1440px;
+    width: auto;
+    padding-top: 188px;
+    padding-bottom: 188px;
+    background-size: auto;
+    margin-bottom: 120px;
+  }
+  .hero-title {
+    width: 492px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 48px;
+  }
+}
 
 /* ================= features =================*/
 .features-icon {
@@ -497,9 +542,56 @@ button {
     width: calc((100% - 24px) / 2);
   }
 }
+@media screen and (min-width: 1200px) {
+  .features-list {
+    flex-wrap: nowrap;
+  }
+  .features-title {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    text-align: left;
+  }
+  .features-icon {
+    display: block;
+  }
+  .features-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 112px;
+    background-color: #f4f4fd;
+    margin-bottom: 8px;
+  }
+}
+
 /* =========== what we are doing ========*/
 .work-section {
   display: none;
+}
+@media screen and (min-width: 1200px) {
+  .work-section {
+    display: block;
+    margin-bottom: 120px;
+  }
+  .work-title {
+    color: var(--title-color);
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    text-align: center;
+    margin-bottom: 72px;
+  }
+
+  .work-list {
+    display: flex;
+  }
+  .work-list-item:not(:last-child) {
+    margin-right: 24px;
+  }
 }
 
 /* ================= our team =================*/
@@ -589,6 +681,13 @@ button {
     padding-bottom: 104px;
   }
 }
+
+@media screen and (min-width: 1200px) {
+  .team {
+    padding-bottom: 120px;
+    width: auto;
+  }
+}
 /* ==================customers============== */
 
 .customers {
@@ -644,6 +743,11 @@ button {
   }
   .customers-link {
     width: 168px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .customers {
+    padding: 120px 0;
   }
 }
 /* ================= footer =================*/
@@ -798,7 +902,7 @@ button {
   color: #ffffff;
   text-align: left;
   padding: 8px 24px;
-  text-align: center;
+  text-align: left;
   margin-left: auto;
   margin-right: auto;
 }
@@ -819,9 +923,10 @@ button {
     display: flex;
     flex-wrap: wrap;
     gap: 72px 24px;
+    padding-left: 108px;
   }
   .footer {
-    padding-left: 108px;
+    width: auto;
   }
   .footer-form {
     flex-direction: row;
@@ -839,6 +944,16 @@ button {
   }
   .footer-text {
     margin-bottom: 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer-blocks {
+    padding: 0;
+    justify-content: space-between;
+  }
+  .footer {
+    padding-top: 100px;
+    padding-bottom: 100px;
   }
 }
 /* =============backdrop============== */
